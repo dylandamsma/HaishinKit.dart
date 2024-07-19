@@ -93,6 +93,8 @@ extension IOStreamDrawableTexture: IOStreamView {
 
     func enqueue(_ sampleBuffer: CMSampleBuffer?) {
         currentSampleBuffer = sampleBuffer
-        self.registry.textureFrameAvailable(id)
+        DispatchQueue.main.async {
+            self.registry.textureFrameAvailable(self.id)
+        }
     }
 }

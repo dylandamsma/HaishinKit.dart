@@ -233,7 +233,9 @@ class RTMPStreamHandler: NSObject, MethodCallHandler {
         var map: [String: Any?] = [:]
         map["type"] = event.type.rawValue
         map["data"] = ASObjectUtil.removeEmpty(event.data)
-        eventSink?(map)
+        DispatchQueue.main.async {
+            self.eventSink?(map)
+        }
     }
 
     @objc
@@ -247,11 +249,16 @@ class RTMPStreamHandler: NSObject, MethodCallHandler {
 
 extension RTMPStreamHandler: FlutterStreamHandler {
     public func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {
-        self.eventSink = events
+        self.eventSink = { event in
+            DispatchQueue.main.async {
+                events(event)
+            }
+        }
         return nil
     }
 
     public func onCancel(withArguments arguments: Any?) -> FlutterError? {
+        self.eventSink = nil
         return nil
     }
 }

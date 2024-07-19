@@ -17,6 +17,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		09D217B02C4ABC9700DF0F6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC781CD5287259FB00DE3021 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4683C6A6BA60720F17CAD71C28988BDC;
+			remoteInfo = "permission_handler_apple-permission_handler_apple_privacy";
+		};
 		BC0207CD2913A64E00A0B3DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BC781CD5287259FB00DE3021 /* Pods.xcodeproj */;
@@ -174,12 +181,13 @@
 		BC781CD6287259FB00DE3021 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC0207CE2913A64E00A0B3DF /* audio_session */,
-				BC781CDF287259FB00DE3021 /* haishin_kit */,
-				BC781CE1287259FB00DE3021 /* HaishinKit */,
-				BC781CE3287259FB00DE3021 /* Logboard */,
-				BC781CE5287259FB00DE3021 /* permission_handler_apple */,
-				BC781CE7287259FB00DE3021 /* Pods-Runner */,
+				BC0207CE2913A64E00A0B3DF /* audio_session.framework */,
+				BC781CDF287259FB00DE3021 /* haishin_kit.framework */,
+				BC781CE1287259FB00DE3021 /* HaishinKit.framework */,
+				BC781CE3287259FB00DE3021 /* Logboard.framework */,
+				BC781CE5287259FB00DE3021 /* permission_handler_apple.framework */,
+				09D217B12C4ABC9700DF0F6F /* permission_handler_apple_privacy.bundle */,
+				BC781CE7287259FB00DE3021 /* Pods_Runner.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,7 +224,7 @@
 		97C146E61CF9000F007C117D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1510;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					97C146ED1CF9000F007C117D = {
@@ -250,50 +258,51 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		BC0207CE2913A64E00A0B3DF /* audio_session */ = {
+		09D217B12C4ABC9700DF0F6F /* permission_handler_apple_privacy.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = permission_handler_apple_privacy.bundle;
+			remoteRef = 09D217B02C4ABC9700DF0F6F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BC0207CE2913A64E00A0B3DF /* audio_session.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			name = audio_session;
 			path = audio_session.framework;
 			remoteRef = BC0207CD2913A64E00A0B3DF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BC781CDF287259FB00DE3021 /* haishin_kit */ = {
+		BC781CDF287259FB00DE3021 /* haishin_kit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			name = haishin_kit;
 			path = haishin_kit.framework;
 			remoteRef = BC781CDE287259FB00DE3021 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BC781CE1287259FB00DE3021 /* HaishinKit */ = {
+		BC781CE1287259FB00DE3021 /* HaishinKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			name = HaishinKit;
 			path = HaishinKit.framework;
 			remoteRef = BC781CE0287259FB00DE3021 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BC781CE3287259FB00DE3021 /* Logboard */ = {
+		BC781CE3287259FB00DE3021 /* Logboard.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			name = Logboard;
 			path = Logboard.framework;
 			remoteRef = BC781CE2287259FB00DE3021 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BC781CE5287259FB00DE3021 /* permission_handler_apple */ = {
+		BC781CE5287259FB00DE3021 /* permission_handler_apple.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			name = permission_handler_apple;
 			path = permission_handler_apple.framework;
 			remoteRef = BC781CE4287259FB00DE3021 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		BC781CE7287259FB00DE3021 /* Pods-Runner */ = {
+		BC781CE7287259FB00DE3021 /* Pods_Runner.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			name = "Pods-Runner";
 			path = Pods_Runner.framework;
 			remoteRef = BC781CE6287259FB00DE3021 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -493,14 +502,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = SUEQ2SZ2L5;
+				DEVELOPMENT_TEAM = U4J483D3A8;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.haishinKitExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.baseline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -622,14 +631,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = SUEQ2SZ2L5;
+				DEVELOPMENT_TEAM = U4J483D3A8;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.haishinKitExample.local;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.baseline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -645,14 +654,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = SUEQ2SZ2L5;
+				DEVELOPMENT_TEAM = U4J483D3A8;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.haishinKitExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haishinkit.baseline;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
